@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* =========================
+   GLOBAL STYLES (STATIONERY STORE)
+========================= */
+
+:root {
+  --primary: #2563eb; /* blue-600 (stationery theme = professional/office vibe) */
+  --background: #f9fafb;
+  --text: #111827;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   CONTAINER SYSTEM
+========================= */
+
+.container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* =========================
+   GLOBAL UI HELPERS
+========================= */
+
+/* Card style (reuse everywhere) */
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition;
+}
+
+/* Button primary */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition;
+}
+
+/* Button secondary */
+.btn-secondary {
+  @apply border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100 transition;
+}
+
+/* Section spacing */
+.section {
+  @apply py-10 md:py-16;
+}
+
+/* Text styles */
+.title {
+  @apply text-2xl md:text-3xl font-bold text-gray-800;
+}
+
+.subtitle {
+  @apply text-gray-500 text-sm md:text-base;
+}
+
+/* =========================
+   SCROLLBAR (PRO LOOK)
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
