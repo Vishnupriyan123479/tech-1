@@ -12,11 +12,11 @@ export type StationeryCategory =
   | 'Accessories';
 
 // Define the Stationery interface using the union type
-export interface Stationery {
+export type Product = {
   id: number;
   name: string;
   price: number;
   category: StationeryCategory; // This links the type to the field
   image: string;
   desc: string;
-}
+};
