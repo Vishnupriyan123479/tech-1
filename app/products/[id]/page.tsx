@@ -29,19 +29,19 @@ setLoading(false);
 return;
 }
 
-```
+
 const found = products.find((p) => p.id === id);
 
 setProduct(found || null);
 setLoading(false);
-```
+
 
 }, [id]);
 
 const addToCart = () => {
 if (!product) return;
 
-```
+
 const cart: CartItem[] = JSON.parse(
   localStorage.getItem("cart") ?? "[]"
 );
@@ -64,14 +64,14 @@ if (existing) {
 
 localStorage.setItem("cart", JSON.stringify(updated));
 alert("Added to cart 🛒");
-```
+
 
 };
 
 const addToWishlist = () => {
 if (!product) return;
 
-```
+
 const list: Product[] = JSON.parse(
   localStorage.getItem("wishlist") ?? "[]"
 );
@@ -90,7 +90,7 @@ if (!exists) {
 } else {
   alert("Already in wishlist");
 }
-```
+
 
 };
 
@@ -108,7 +108,7 @@ Product not found 📦 </div>
 
 return ( <div className="max-w-5xl mx-auto mt-10 px-4 fade-in"> <div className="grid md:grid-cols-2 gap-10 bg-white shadow-md rounded-2xl p-6">
 
-```
+
     <div className="relative h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
       <Image
         src={product.image}
@@ -153,7 +153,5 @@ return ( <div className="max-w-5xl mx-auto mt-10 px-4 fade-in"> <div className="
     </div>
   </div>
 </div>
-```
-
 );
 }
